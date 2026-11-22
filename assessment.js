@@ -93,6 +93,10 @@ const answers = [
  * @return {string} 診断結果
  */
 function assessment(userName) {
+  // tosigabuと入力した場合
+  if (userName === 'tosigabu') {
+    return 'tosigabuのいいところは真面目過ぎるところです。雑談の場でも真面目に話してしまうので、ちょっとはふざけましょう。';
+  }
   // 全文字のコード番号を取得してそれを足し合わせる
   let sumOfCharCode = 0;
   for (let i = 0; i < userName.length; i++) {
@@ -134,6 +138,7 @@ function test() {
     '花子のいいところはまなざしです。花子に見つめられた人は、気になって仕方がないでしょう。',
     '診断結果の文言の特定の部分を名前に置き換える処理が正しくありません。'
   );
+
 
   console.log('診断結果の文章のテスト終了');
 
